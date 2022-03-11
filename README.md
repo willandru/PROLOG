@@ -30,3 +30,7 @@ loves(juliet, romeo) :- 		%This is a RULE
 	loves(romeo, juliet). 
 
 ?-linsting(PREDICATE).
+
+%::To know Whichs symbols our OS is supporting
+?- setof(Z,current_op(X,Y,Z),L), write(X-Y-L), nl, fail.
+	
