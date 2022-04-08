@@ -1,0 +1,23 @@
+Prolog is a programming language for symbolic, non-numeric computation.
+
+Para la relacion de parentesco, tememos diferentes hechos. Podemos preguntarle a prolog entonces cosas como:
+
+?-parent(cesar,sabastia).
+?-parent(marcos,daniela).
+?-parent(X,natalia).
+?-parent(mireya,X).
+?-parent(X,Y).
+?-parent(Y,cristian), parent(X,Y).  #¿Quién es el abuel@ de cristian?
+?-parent(mateo+,X),parent(X,Y).  #¿Quien es nieto de mateo+?
+?-parent(X,cristian),parent(X,nataly). #¿El padre de cristian es el mismo q el de nataly?
+
+Átomos -> natalia
+Variables -> X,Y
+metas -> parent(Y,cristian).
+conjunto de metas -> parent(Y,cristian), parent(X,Y).
+
+Prolog interpreta las preguntas como "metas" a ser satisfechas: es decir, deducir logicamente la meta de las reglas del programa.. 
+True significa que la meta puede ser satisfecha/False significa que la meta no puede ser satisfehca.
+
+reglas ->  father(X,Y):- parent(X,Y) , male(X).
+hechos -> parent(cesar,sebastian).
